@@ -1,4 +1,4 @@
-import { EmailVerify } from '@/components/EmailVerify';
+import { EmailVerify } from '@/components/login/EmailVerify';
 import Head from 'next/head';
 
 export default function Home() {

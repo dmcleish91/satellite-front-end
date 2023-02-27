@@ -1,6 +1,6 @@
-import { Button, Input, Link } from '@geist-ui/core';
+import { Button, Input } from '@geist-ui/core';
 import { useRouter } from 'next/router';
-import { Mail } from 'react-feather';
+import { Lock, Mail } from 'react-feather';
 
 export const EmailVerify = () => {
   const router = useRouter();
@@ -9,18 +9,18 @@ export const EmailVerify = () => {
       <p className='text-3xl font-bold tracking-normal mb-7'>Log in to Continue</p>
       <Input placeholder='Email Address' scale={1.5} width='300px' />
       {/* <Input.Password placeholder='Password' scale={1.5} width='300px' /> */}
+      <Button icon={<Mail />} type='success' scale={1.5} width='300px' onClick={() => router.push('/dashboard')}>
+        <p className='font-medium'>Magic Verification</p>
+      </Button>
       <Button
-        icon={<Mail />}
-        type='success'
+        icon={<Lock />}
+        type='secondary'
         scale={1.5}
         width='300px'
         style={{ marginBottom: '24px' }}
         onClick={() => router.push('/dashboard')}>
-        <p className='font-medium'>Continue with Email</p>
+        <p className='font-medium'>Password Verification</p>
       </Button>
-      <Link href='#' color>
-        ← Other Login Options
-      </Link>
     </div>
   );
 };
