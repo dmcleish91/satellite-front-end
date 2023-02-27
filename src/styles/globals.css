@@ -7,3 +7,11 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
+
+a {
+    all: unset;
+}
+
+a:hover {
+    background-color: #eaeaea;
+}
