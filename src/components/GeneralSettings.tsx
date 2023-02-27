@@ -1,14 +1,10 @@
-import { Button, Fieldset, Input, useToasts } from '@geist-ui/core';
+import { Button, Fieldset, Input } from '@geist-ui/core';
+import { toast } from 'react-toastify';
 
 export const GeneralSettings = () => {
-  const { setToast } = useToasts();
-
-  const showToast = (message: string, type: 'default' | 'secondary' | 'success' | 'warning' | 'error' | undefined) =>
-    setToast({
-      text: message,
-      type,
-      delay: 3000,
-    });
+  const notify = (message: string) => {
+    toast(message);
+  };
 
   return (
     <>
@@ -20,7 +16,7 @@ export const GeneralSettings = () => {
         </Fieldset.Subtitle>
         <Fieldset.Footer>
           Please use 48 characters at maximum.
-          <Button auto scale={2 / 3} font='12px' type='secondary' onClick={() => showToast('username updated succesfully!', 'success')}>
+          <Button auto scale={2 / 3} font='12px' type='secondary' onClick={() => notify('Username updated sucessfully!')}>
             Save
           </Button>
         </Fieldset.Footer>

@@ -3,18 +3,15 @@ import '@/styles/globals.css';
 import { CssBaseline, GeistProvider } from '@geist-ui/core';
 import 'inter-ui/inter.css';
 import type { AppProps } from 'next/app';
-import { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [themeType, setThemeType] = useState('light');
-  const switchThemes = () => {
-    setThemeType((last) => (last === 'dark' ? 'light' : 'dark'));
-  };
-
   return (
-    <GeistProvider themeType={themeType}>
+    <GeistProvider>
       <CssBaseline />
-      <Layout switchTheme={switchThemes}>
+      <ToastContainer position='bottom-right' />
+      <Layout>
         <Component {...pageProps} />
       </Layout>
     </GeistProvider>

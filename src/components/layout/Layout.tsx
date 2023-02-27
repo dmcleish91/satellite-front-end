@@ -1,10 +1,10 @@
 import { Fragment, ReactNode } from 'react';
 import { Header } from './Header';
 
-export default function Layout({ switchTheme, children }: { switchTheme: () => void; children: ReactNode }) {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
     <Fragment>
-      <Header themeSwitcher={switchTheme} />
+      <Header />
       <main>{children}</main>
     </Fragment>
   );

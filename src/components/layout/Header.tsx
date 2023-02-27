@@ -1,16 +1,8 @@
 import { Button, Link } from '@geist-ui/core';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { Gitlab, Moon, Sun } from 'react-feather';
+import { Gitlab } from 'react-feather';
 
-export const Header: React.FC<{ themeSwitcher: () => void }> = ({ themeSwitcher }) => {
-  const [icon, setIcon] = useState(<Sun />);
-
-  const themeIcon = () => {
-    themeSwitcher();
-    setIcon(icon.type === Sun ? <Moon /> : <Sun />);
-  };
-
+export const Header: React.FC = () => {
   const router = useRouter();
 
   return (
@@ -25,9 +17,6 @@ export const Header: React.FC<{ themeSwitcher: () => void }> = ({ themeSwitcher 
         <Button auto scale={2 / 3} style={{ fontSize: '14px', fontWeight: '500' }} onClick={() => router.push('/')}>
           Sign in
         </Button>
-        {/* <div className='flex flex-row space-x-4'>
-          <Button iconRight={icon} auto scale={2 / 3} px={0.6} onClick={themeIcon} />
-        </div> */}
       </div>
     </div>
   );
