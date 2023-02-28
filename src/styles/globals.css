@@ -8,10 +8,10 @@
     text-rendering: optimizeLegibility;
 }
 
-a {
+.geist-link {
     all: unset;
 }
 
-a:hover {
+.geist-link:hover {
     background-color: #eaeaea;
 }

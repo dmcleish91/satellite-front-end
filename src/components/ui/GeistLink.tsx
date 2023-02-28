@@ -1,10 +1,11 @@
-import Link from 'next/link';
 import { ReactNode } from 'react';
 
-export const GeistLink: React.FC<{ href: string; children: ReactNode }> = ({ href, children }) => {
+export const GeistLink: React.FC<{ route: string; children: ReactNode }> = ({ route, children }) => {
   return (
-    <Link
-      href={href}
+    <div
+      className='geist-link'
+      role={'button'}
+      onClick={() => console.log('geist link clicked')}
       style={{
         padding: '8px',
         width: '228px',
@@ -14,6 +15,6 @@ export const GeistLink: React.FC<{ href: string; children: ReactNode }> = ({ hre
         color: 'black',
       }}>
       {children}
-    </Link>
+    </div>
   );
 };

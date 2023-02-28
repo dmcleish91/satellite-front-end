@@ -9,7 +9,7 @@ export const EmailVerify = () => {
       <p className='text-3xl font-bold tracking-normal mb-7'>Log in to Continue</p>
       <Input placeholder='Email Address' scale={1.5} width='300px' />
       {/* <Input.Password placeholder='Password' scale={1.5} width='300px' /> */}
-      <Button icon={<Mail />} type='success' scale={1.5} width='300px' onClick={() => router.push('/dashboard')}>
+      <Button icon={<Mail />} type='success' scale={1.5} width='300px' onClick={() => router.push('/dashboard/overview')}>
         <p className='font-medium'>Magic Verification</p>
       </Button>
       <Button

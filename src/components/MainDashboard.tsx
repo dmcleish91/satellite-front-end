@@ -3,8 +3,10 @@ import { Title } from '@/components/layout/Title';
 import { GeistLink } from '@/components/ui/GeistLink';
 import { Tabs } from '@geist-ui/core';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 export default function MainDashboard() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -14,11 +16,11 @@ export default function MainDashboard() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Tabs initialValue='7'>
-        <Tabs.Item label='Overview' value='1'>
+      <Tabs value={router.pathname} onChange={(route) => router.push(route)}>
+        <Tabs.Item label='Overview' value='/dashboard/overview'>
           <Title>Overview</Title>
         </Tabs.Item>
-        <Tabs.Item label='Reports' value='2'>
+        <Tabs.Item label='Reports' value='/dashboard/reports'>
           <Title>Reports</Title>
         </Tabs.Item>
         <Tabs.Item label='Activity' value='3'>
@@ -33,16 +35,16 @@ export default function MainDashboard() {
         <Tabs.Item label='Integrations' value='6'>
           <Title>Integrations</Title>
         </Tabs.Item>
-        <Tabs.Item label='Settings' value='7'>
+        <Tabs.Item label='Settings' value='/dashboard/settings'>
           <Title>Personal Account Settings</Title>
           <div className='flex flex-row justify-center p-12'>
             <div className='flex flex-row space-x-4'>
               <nav className='flex flex-col'>
-                <GeistLink href={''}>General</GeistLink>
-                <GeistLink href={''}>Advanced</GeistLink>
-                <GeistLink href={''}>Theme</GeistLink>
-                <GeistLink href={''}>Other</GeistLink>
-                <GeistLink href={''}>Teams</GeistLink>
+                <GeistLink route={''}>General</GeistLink>
+                <GeistLink route={''}>Advanced</GeistLink>
+                <GeistLink route={''}>Theme</GeistLink>
+                <GeistLink route={''}>Other</GeistLink>
+                <GeistLink route={''}>Teams</GeistLink>
               </nav>
 
               <div className='w-[910px] space-y-8'>
