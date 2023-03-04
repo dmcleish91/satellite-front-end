@@ -1,10 +1,10 @@
 import { Fragment, ReactNode } from 'react';
-import { Header } from './Header';
+import { AuthenticatedHeader } from './AuthenticatedHeader';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <Fragment>
-      <Header />
+      <AuthenticatedHeader />
       <main>{children}</main>
     </Fragment>
   );

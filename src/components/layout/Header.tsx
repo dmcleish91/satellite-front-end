@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
 
   return (
     <div className='flex flex-row justify-center items-center w-full border-b-2 border-gray-200'>
-      <div className='flex flex-row justify-between items-center h-[64px] w-[1170px] px-5'>
+      <div className='flex flex-row justify-between items-center h-[48px] w-[1170px] px-5'>
         <div className='flex flex-row items-center space-x-2'>
           <Gitlab size={24} /> <p className='text-xl font-bold'>Spa Mockup</p>
         </div>

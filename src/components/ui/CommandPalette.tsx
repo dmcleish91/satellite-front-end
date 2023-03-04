@@ -14,8 +14,8 @@ export const CommandPaletteImpl = () => {
         id: 'home',
         items: [
           {
-            id: 'home',
-            children: 'Home',
+            id: 'Dashboard',
+            children: 'Dashboard',
             icon: 'HomeIcon',
             href: '#',
           },
@@ -25,33 +25,12 @@ export const CommandPaletteImpl = () => {
             icon: 'CogIcon',
             href: '#',
           },
-          {
-            id: 'projects',
-            children: 'Projects',
-            icon: 'RectangleStackIcon',
-            closeOnSelect: false,
-            onClick: () => {
-              setPage('projects');
-            },
-          },
         ],
       },
       {
         heading: 'Other',
         id: 'advanced',
         items: [
-          {
-            id: 'developer-settings',
-            children: 'Developer settings',
-            icon: 'CodeBracketIcon',
-            href: '#',
-          },
-          {
-            id: 'privacy-policy',
-            children: 'Privacy policy',
-            icon: 'LifebuoyIcon',
-            href: '#',
-          },
           {
             id: 'log-out',
             children: 'Log out',
@@ -81,8 +60,6 @@ export const CommandPaletteImpl = () => {
           <CommandPalette.FreeSearchAction />
         )}
       </CommandPalette.Page>
-
-      <CommandPalette.Page id='projects'>{/* Projects page */}</CommandPalette.Page>
     </CommandPalette>
   );
 };

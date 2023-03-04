@@ -1,9 +1,11 @@
 import { GeneralSettings } from '@/components/GeneralSettings';
 import { Title } from '@/components/layout/Title';
 import { GeistLink } from '@/components/ui/GeistLink';
-import { Tabs } from '@geist-ui/core';
+import { tableData } from '@/pages/dashboard/overview';
+import { Tabs, Text } from '@geist-ui/core';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { DisplayTable } from './data/DisplayTable';
 
 export default function MainDashboard() {
   const router = useRouter();
@@ -16,28 +18,22 @@ export default function MainDashboard() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Tabs value={router.pathname} onChange={(route) => router.push(route)}>
+      <Tabs value={router.pathname} onChange={(route) => router.push(route)} style={{ backgroundColor: '#fafafa' }}>
         <Tabs.Item label='Overview' value='/dashboard/overview'>
           <Title>Overview</Title>
+          <div className='flex justify-center bg-[#fafafa] h-[1050px]'>
+            <div className='w-1/2 space-y-4'>
+              <Text h4>Unsubmitted Orders</Text>
+              <DisplayTable data={tableData} />
+            </div>
+          </div>
         </Tabs.Item>
         <Tabs.Item label='Reports' value='/dashboard/reports'>
           <Title>Reports</Title>
         </Tabs.Item>
-        <Tabs.Item label='Activity' value='3'>
-          <Title>Activity</Title>
-        </Tabs.Item>
-        <Tabs.Item label='Domains' value='4'>
-          <Title>Domains</Title>
-        </Tabs.Item>
-        <Tabs.Item label='Usage' value='5'>
-          <Title>Usage</Title>
-        </Tabs.Item>
-        <Tabs.Item label='Integrations' value='6'>
-          <Title>Integrations</Title>
-        </Tabs.Item>
-        <Tabs.Item label='Settings' value='/dashboard/settings'>
+        <Tabs.Item label='Settings' value='/dashboard/settings' style={{ backgroundColor: '#fafafa' }}>
           <Title>Personal Account Settings</Title>
-          <div className='flex flex-row justify-center p-12'>
+          <div className='flex flex-row justify-center p-12 bg-[#fafafa]'>
             <div className='flex flex-row space-x-4'>
               <nav className='flex flex-col'>
                 <GeistLink route={''}>General</GeistLink>

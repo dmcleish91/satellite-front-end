@@ -3,15 +3,84 @@
 @tailwind utilities;
 
 * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-.geist-link {
-    all: unset;
+.auth-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #d1d5db;
+  background-color: #fafafa;
+  height: 48px;
+}
+
+.auth-menu {
+  display: flex;
+  align-items: center;
+  padding-right: 28px;
+  gap: 0.5rem;
+}
+
+.popover-position {
+  position: relative;
+  z-index: 10;
+}
+
+.popover-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px; /* Use a large number for the border radius to make the element perfectly circular */
+  border: 1px solid #d1d5db; /* Add a border to the element */
+  height: 28px;
+  width: 28px;
+}
+
+.popover-button:hover {
+  background-color: #eaeaea;
+}
+
+.popover-panel {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  transform: translateX(4px);
+  margin-top: 2px;
+}
+
+.popover-card {
+  min-width: 400px;
+  min-height: 500px;
+  max-width: 20rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.popover-tabs {
+  margin-top: 11px;
+}
+
+.settings-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 24px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.geist-link,
+.reset {
+  all: unset;
 }
 
 .geist-link:hover {
-    background-color: #eaeaea;
+  background-color: #eaeaea;
 }
