@@ -1,13 +1,13 @@
 import { GeneralSettings } from '@/components/GeneralSettings';
 import { Title } from '@/components/layout/Title';
 import { GeistLink } from '@/components/ui/GeistLink';
-import { tableData } from '@/pages/dashboard/overview';
+import { TableData } from '@/pages/dashboard/overview';
 import { Tabs, Text } from '@geist-ui/core';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { DisplayTable } from './data/DisplayTable';
+import UnsubmittedOrdersTable from './data/UnsubmittedOrdersTable';
 
-export default function MainDashboard() {
+export default function MainDashboard({ tableData }: { tableData?: TableData }) {
   const router = useRouter();
   return (
     <>
@@ -20,11 +20,14 @@ export default function MainDashboard() {
 
       <Tabs value={router.pathname} onChange={(route) => router.push(route)} style={{ backgroundColor: '#fafafa' }}>
         <Tabs.Item label='Overview' value='/dashboard/overview'>
-          <Title>Overview</Title>
-          <div className='flex justify-center bg-[#fafafa] h-[1050px]'>
-            <div className='w-1/2 space-y-4'>
-              <Text h4>Unsubmitted Orders</Text>
-              <DisplayTable data={tableData} />
+          <div className='flex flex-col bg-[#fafafa]'>
+            <div className='w-1/2 space-y-4 p-4 overflow-x-auto h-64'>
+              {tableData && (
+                <>
+                  <Text h4>Unsubmitted Orders</Text>
+                  <UnsubmittedOrdersTable data={tableData} />
+                </>
+              )}
             </div>
           </div>
         </Tabs.Item>
@@ -42,7 +45,6 @@ export default function MainDashboard() {
                 <GeistLink route={''}>Other</GeistLink>
                 <GeistLink route={''}>Teams</GeistLink>
               </nav>
-
               <div className='w-[910px] space-y-8'>
                 <GeneralSettings />
               </div>

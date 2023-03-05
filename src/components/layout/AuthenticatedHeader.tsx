@@ -1,7 +1,7 @@
 import { Avatar } from '@geist-ui/core';
 import InboxPopover from '../ui/InboxPopover';
 
-export const AuthenticatedHeader: React.FC = () => {
+export default function AuthenticatedHeader() {
   return (
     <div className='auth-header'>
       <div className='auth-menu'>
@@ -10,4 +10,4 @@ export const AuthenticatedHeader: React.FC = () => {
       </div>
     </div>
   );
-};
+}

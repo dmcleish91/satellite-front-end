@@ -5,21 +5,26 @@ import { Lock, Mail } from 'react-feather';
 export const EmailVerify = () => {
   const router = useRouter();
   return (
-    <div className='flex flex-col items-center justify-center h-[1110px] space-y-2'>
+    <div className='flex flex-col items-center justify-center h-[1110px] space-y-2 bg-[#fafafa]'>
       <p className='text-3xl font-bold tracking-normal mb-7'>Log in to Continue</p>
       <Input placeholder='Email Address' scale={1.5} width='300px' />
-      {/* <Input.Password placeholder='Password' scale={1.5} width='300px' /> */}
-      <Button icon={<Mail />} type='success' scale={1.5} width='300px' onClick={() => router.push('/dashboard/overview')}>
-        <p className='font-medium'>Magic Verification</p>
+      <Button
+        icon={<Mail />}
+        type='success-light'
+        scale={1.5}
+        width='300px'
+        style={{ fontWeight: '500' }}
+        onClick={() => router.push('/dashboard/overview')}>
+        Magic Verification
       </Button>
       <Button
         icon={<Lock />}
-        type='secondary'
+        type='secondary-light'
         scale={1.5}
         width='300px'
-        style={{ marginBottom: '24px' }}
+        style={{ fontWeight: '500', marginBottom: '24px' }}
         onClick={() => router.push('/dashboard')}>
-        <p className='font-medium'>Password Verification</p>
+        Password Verification
       </Button>
     </div>
   );

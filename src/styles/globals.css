@@ -35,8 +35,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 9999px; /* Use a large number for the border radius to make the element perfectly circular */
-  border: 1px solid #d1d5db; /* Add a border to the element */
+  border-radius: 9999px;
+  border: 1px solid #d1d5db;
   height: 28px;
   width: 28px;
 }
@@ -61,10 +61,6 @@
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.popover-tabs {
-  margin-top: 11px;
 }
 
 .settings-title {
