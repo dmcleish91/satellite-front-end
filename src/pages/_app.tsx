@@ -3,6 +3,7 @@ import { CommandPaletteImpl } from '@/components/ui/CommandPalette';
 import { CssBaseline, GeistProvider } from '@geist-ui/core';
 import type { AppProps } from 'next/app';
 import { ToastContainer } from 'react-toastify';
+import { SessionProvider } from 'next-auth/react';
 import '@/styles/globals.css';
 import 'inter-ui/inter.css';
 import 'react-cmdk/dist/cmdk.css';
@@ -13,10 +14,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <GeistProvider>
       <CssBaseline />
       <ToastContainer position='bottom-right' />
-      <Layout>
-        <CommandPaletteImpl />
-        <Component {...pageProps} />
-      </Layout>
+      <SessionProvider session={pageProps.session}>
+        <Layout>
+          <CommandPaletteImpl />
+          <Component {...pageProps} />
+        </Layout>
+      </SessionProvider>
     </GeistProvider>
   );
 }

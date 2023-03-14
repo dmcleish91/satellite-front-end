@@ -1,40 +1,41 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { PrismaClient } from '@prisma/client';
 import { NextAuthOptions } from 'next-auth';
 import NextAuth from 'next-auth/next';
 import CredentialProvider from 'next-auth/providers/credentials';
+import EmailProvider from 'next-auth/providers/email';
 
 const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
   providers: [
+    EmailProvider({
+      server: process.env.EMAIL_SERVER,
+      from: process.env.EMAIL_FROM,
+    }),
     CredentialProvider({
       type: 'credentials',
       credentials: {},
       authorize: async (credentials) => {
-        const { email, password } = credentials as { email: string; password: string };
-        console.log('credentials =', credentials);
+        const { email } = credentials as { email: string };
 
-        //const client = await connectToClient();
-        //const db = client.db();
-        //const user = await userExists(db, 'users', { email: email });
+        const prisma = new PrismaClient();
+        const userExists = await prisma.users.findUnique({
+          where: {
+            email: email,
+          },
+        });
 
-        // if (!user) {
-        //   client.close();
-        //   throw new Error('No user found!');
-        // }
+        console.log(userExists);
 
-        // console.log('user = ', user);
+        if (!userExists) {
+          prisma.$disconnect();
+          throw new Error('No user with that email exists');
+        }
 
-        //const isValid = verifyPassword(password, user.password);
-
-        // if (!isValid) {
-        //   client.close();
-        //   throw new Error('invalid password! Try again!');
-        // }
-
-        // client.close();
-        return { id: 'user._id.toString()', email: email };
+        prisma.$disconnect();
+        return { id: 'crypto.randomUUID()', email: email };
       },
     }),
   ],

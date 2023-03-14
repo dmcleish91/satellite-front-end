@@ -21,7 +21,7 @@ export default function MainDashboard({ tableData }: { tableData?: TableData }) 
       <Tabs value={router.pathname} onChange={(route) => router.push(route)} style={{ backgroundColor: '#fafafa' }}>
         <Tabs.Item label='Overview' value='/dashboard/overview'>
           <div className='flex flex-col bg-[#fafafa]'>
-            <div className='w-1/2 space-y-4 p-4 overflow-x-auto h-64'>
+            <div className='w-1/2 space-y-4 p-4 overflow-x-auto h-[1200px]'>
               {tableData && (
                 <>
                   <Text h4>Unsubmitted Orders</Text>
