@@ -1,5 +1,7 @@
 import UnsubmittedOrdersTable from '@/components/data/UnsubmittedOrdersTable';
 import { Text } from '@geist-ui/core';
+import { GetServerSideProps } from 'next/types';
+import { getSession } from 'next-auth/react';
 
 export type TableData = {
   orderDate: string;
@@ -136,3 +138,22 @@ export default function Dashboard() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession({ req: context.req });
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {
+      session,
+    },
+  };
+};
