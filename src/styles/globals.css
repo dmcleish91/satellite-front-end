@@ -8,6 +8,11 @@
   text-rendering: optimizeLegibility;
 }
 
+body,
+html {
+  background-color: #fafafa !important;
+}
+
 .auth-header {
   display: flex;
   flex-direction: row;
@@ -83,4 +88,8 @@
 
 .geist-link:hover {
   background-color: #eaeaea;
+}
+
+.tabs > .content {
+  display: none;
 }

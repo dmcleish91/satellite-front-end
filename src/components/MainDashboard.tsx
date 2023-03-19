@@ -18,41 +18,6 @@ export default function MainDashboard({ tableData }: { tableData?: TableData }) 
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Tabs value={router.pathname} onChange={(route) => router.push(route)} style={{ backgroundColor: '#fafafa' }}>
-        <Tabs.Item label='Overview' value='/dashboard/overview'>
-          <div className='flex flex-col bg-[#fafafa]'>
-            <div className='w-1/2 space-y-4 p-4 overflow-x-auto h-[1200px]'>
-              {tableData && (
-                <>
-                  <Text h4>Unsubmitted Orders</Text>
-                  <UnsubmittedOrdersTable data={tableData} />
-                </>
-              )}
-            </div>
-          </div>
-        </Tabs.Item>
-        <Tabs.Item label='Reports' value='/dashboard/reports'>
-          <Title>Reports</Title>
-        </Tabs.Item>
-        <Tabs.Item label='Settings' value='/dashboard/settings' style={{ backgroundColor: '#fafafa' }}>
-          <Title>Personal Account Settings</Title>
-          <div className='flex flex-row justify-center p-12 bg-[#fafafa]'>
-            <div className='flex flex-row space-x-4'>
-              <nav className='flex flex-col'>
-                <GeistLink route={''}>General</GeistLink>
-                <GeistLink route={''}>Advanced</GeistLink>
-                <GeistLink route={''}>Theme</GeistLink>
-                <GeistLink route={''}>Other</GeistLink>
-                <GeistLink route={''}>Teams</GeistLink>
-              </nav>
-              <div className='w-[910px] space-y-8'>
-                <GeneralSettings />
-              </div>
-            </div>
-          </div>
-        </Tabs.Item>
-      </Tabs>
-
       {/* <EmailVerify /> */}
     </>
   );

@@ -3,17 +3,12 @@ import { PrismaClient } from '@prisma/client';
 import { NextAuthOptions } from 'next-auth';
 import NextAuth from 'next-auth/next';
 import CredentialProvider from 'next-auth/providers/credentials';
-import EmailProvider from 'next-auth/providers/email';
 
 const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
   providers: [
-    EmailProvider({
-      server: process.env.EMAIL_SERVER,
-      from: process.env.EMAIL_FROM,
-    }),
     CredentialProvider({
       type: 'credentials',
       credentials: {},

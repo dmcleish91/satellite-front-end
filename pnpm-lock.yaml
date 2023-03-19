@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@geist-ui/core': ^2.3.8
   '@headlessui/react': ^1.7.12
-  '@next-auth/prisma-adapter': ^1.0.5
   '@prisma/client': 4.11.0
   '@types/bcryptjs': ^2.4.2
   '@types/node': 18.14.1
@@ -32,7 +31,6 @@ specifiers:
 dependencies:
   '@geist-ui/core': 2.3.8_biqbaboplfbrettd7655fr4n2y
   '@headlessui/react': 1.7.12_biqbaboplfbrettd7655fr4n2y
-  '@next-auth/prisma-adapter': 1.0.5_4wli2wpnedw7ca6tsbjejo6e2i
   '@prisma/client': 4.11.0_prisma@4.11.0
   '@types/bcryptjs': 2.4.2
   '@types/node': 18.14.1
@@ -167,16 +165,6 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
-
-  /@next-auth/prisma-adapter/1.0.5_4wli2wpnedw7ca6tsbjejo6e2i:
-    resolution: {integrity: sha512-VqMS11IxPXrPGXw6Oul6jcyS/n8GLOWzRMrPr3EMdtD6eOalM6zz05j08PcNiis8QzkfuYnCv49OvufTuaEwYQ==}
-    peerDependencies:
-      '@prisma/client': '>=2.26.0 || >=3'
-      next-auth: ^4
-    dependencies:
-      '@prisma/client': 4.11.0_prisma@4.11.0
-      next-auth: 4.19.2_klmjkk7frv5rhqq6c6vl6v2ahm
-    dev: false
 
   /@next/env/13.2.1:
     resolution: {integrity: sha512-Hq+6QZ6kgmloCg8Kgrix+4F0HtvLqVK3FZAnlAoS0eonaDemHe1Km4kwjSWRE3JNpJNcKxFHF+jsZrYo0SxWoQ==}

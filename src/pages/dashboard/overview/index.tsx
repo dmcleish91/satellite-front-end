@@ -1,4 +1,5 @@
-import MainDashboard from '@/components/MainDashboard';
+import UnsubmittedOrdersTable from '@/components/data/UnsubmittedOrdersTable';
+import { Text } from '@geist-ui/core';
 
 export type TableData = {
   orderDate: string;
@@ -122,5 +123,16 @@ export const tableData: TableData = [
 ];
 
 export default function Dashboard() {
-  return <MainDashboard tableData={tableData} />;
+  return (
+    <div className='flex flex-col bg-[#fafafa]'>
+      <div className='w-1/2 space-y-4 p-4 overflow-x-auto h-[1200px]'>
+        {tableData && (
+          <>
+            <Text h4>Unsubmitted Orders</Text>
+            <UnsubmittedOrdersTable data={tableData} />
+          </>
+        )}
+      </div>
+    </div>
+  );
 }
