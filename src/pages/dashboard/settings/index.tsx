@@ -11,11 +11,11 @@ export default function Dashboard() {
       <div className='flex flex-row justify-center p-12 bg-[#fafafa]'>
         <div className='flex flex-row space-x-4'>
           <nav className='flex flex-col'>
-            <GeistLink route={''}>General</GeistLink>
-            <GeistLink route={''}>Advanced</GeistLink>
-            <GeistLink route={''}>Theme</GeistLink>
-            <GeistLink route={''}>Other</GeistLink>
-            <GeistLink route={''}>Teams</GeistLink>
+            <GeistLink>General</GeistLink>
+            <GeistLink>Advanced</GeistLink>
+            <GeistLink>Theme</GeistLink>
+            <GeistLink>Other</GeistLink>
+            <GeistLink>Teams</GeistLink>
           </nav>
           <div className='w-[910px] space-y-8'>
             <GeneralSettings />
