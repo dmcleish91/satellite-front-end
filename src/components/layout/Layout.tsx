@@ -15,9 +15,9 @@ export default function Layout({ children }: { children: ReactNode }) {
       {status === 'authenticated' && <AuthenticatedHeader />}
       {status === 'authenticated' && (
         <Tabs value={router.pathname} onChange={(route) => router.push(route)} style={{ backgroundColor: '#fafafa' }}>
-          <Tabs.Item label='Overview' value='/dashboard/overview' />
-          <Tabs.Item label='Reports' value='/dashboard/reports' />
-          <Tabs.Item label='Settings' value='/dashboard/settings' />
+          <Tabs.Item label='Dashboard' value='/dashboard' />
+          <Tabs.Item label='Reports' value='/reports' />
+          <Tabs.Item label='Settings' value='/settings' />
         </Tabs>
       )}
       <main>{children}</main>

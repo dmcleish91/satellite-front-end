@@ -20,7 +20,7 @@ export const PasswordVerify = () => {
     event.preventDefault();
     const result = await signIn('credentials', { redirect: false, email: formData.email, password: formData.password });
     if (!result?.error) {
-      router.replace('/dashboard/overview');
+      router.replace('/dashboard');
     }
     setIsLoading(false);
   }

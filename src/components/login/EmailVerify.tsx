@@ -18,7 +18,7 @@ export const EmailVerify = () => {
     event.preventDefault();
     const result = await signIn('credentials', { redirect: false, email: formData.email });
     if (!result?.error) {
-      router.replace('/dashboard/overview');
+      router.replace('/dashboard');
     }
     setIsLoading(false);
   }

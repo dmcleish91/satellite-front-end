@@ -1,7 +1,7 @@
 import { GeneralSettings } from '@/components/GeneralSettings';
 import { Title } from '@/components/layout/Title';
 import { GeistLink } from '@/components/ui/GeistLink';
-import { TableData } from '@/pages/dashboard/overview';
+import { TableData } from '@/pages/dashboard';
 import { Tabs, Text } from '@geist-ui/core';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

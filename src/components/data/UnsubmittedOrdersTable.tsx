@@ -1,4 +1,4 @@
-import { TableData } from '@/pages/dashboard/overview';
+import { TableData } from '@/pages/dashboard';
 import { Button, Table } from '@geist-ui/core';
 
 export default function UnsubmittedOrdersTable({ data }: { data: TableData }) {
