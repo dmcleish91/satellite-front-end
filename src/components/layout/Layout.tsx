@@ -1,12 +1,13 @@
 import { Tabs } from '@geist-ui/core';
 import { useSession } from 'next-auth/react';
-import router from 'next/router';
+import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 import AuthenticatedHeader from './AuthenticatedHeader';
 import { Header } from './Header';
 
 export default function Layout({ children }: { children: ReactNode }) {
   const { data: session, status } = useSession();
+  const router = useRouter();
 
   return (
     <>

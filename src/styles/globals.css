@@ -58,6 +58,8 @@ html {
 }
 
 .popover-card {
+  display: flex;
+  flex-direction: column;
   min-width: 400px;
   min-height: 500px;
   max-width: 20rem;
@@ -69,7 +71,7 @@ html {
 
 .popover-logout-card {
   min-width: 200px;
-  min-height: 300px;
+  min-height: min-content;
 }
 
 .settings-title {

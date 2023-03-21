@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 
-export const GeistLink: React.FC<{ route: string; children: ReactNode }> = ({ route, children }) => {
+export const GeistLink: React.FC<{ onClick?: () => void; children: ReactNode }> = ({ onClick, children }) => {
   return (
     <div
       className='geist-link'
       role={'button'}
-      onClick={() => console.log('geist link clicked')}
+      onClick={onClick}
       style={{
+        cursor: 'pointer',
         padding: '8px',
         width: '228px',
         borderRadius: '5px',

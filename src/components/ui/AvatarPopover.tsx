@@ -1,5 +1,7 @@
 import { Avatar } from '@geist-ui/core';
 import { Popover, Transition } from '@headlessui/react';
+import { signOut } from 'next-auth/react';
+import { GeistLink } from './GeistLink';
 
 export default function InboxPopover() {
   return (
@@ -17,7 +19,13 @@ export default function InboxPopover() {
         leaveFrom='transform scale-100 opacity-100'
         leaveTo='transform scale-95 opacity-0'>
         <Popover.Panel className='popover-panel'>
-          <div className='popover-card popover-logout-card'>Hello World</div>
+          <div className='popover-card popover-logout-card'>
+            <GeistLink>Dashboard</GeistLink>
+            <GeistLink>Settings</GeistLink>
+            <GeistLink>Command Menu</GeistLink>
+            <GeistLink>Theme</GeistLink>
+            <GeistLink onClick={signOut}>Log Out</GeistLink>
+          </div>
         </Popover.Panel>
       </Transition>
     </Popover>
