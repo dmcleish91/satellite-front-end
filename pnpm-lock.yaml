@@ -16,7 +16,6 @@ specifiers:
   inter-ui: ^3.19.3
   next: 13.2.1
   next-auth: ^4.19.2
-  nodemailer: ^6.9.1
   postcss: ^8.4.21
   prisma: ^4.11.0
   react: 18.2.0
@@ -42,8 +41,7 @@ dependencies:
   framer-motion: 10.6.1_biqbaboplfbrettd7655fr4n2y
   inter-ui: 3.19.3
   next: 13.2.1_biqbaboplfbrettd7655fr4n2y
-  next-auth: 4.19.2_klmjkk7frv5rhqq6c6vl6v2ahm
-  nodemailer: 6.9.1
+  next-auth: 4.19.2_qgtcjgzkkjtbiyvnx7d32fl5vu
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-feather: 2.0.10_react@18.2.0
@@ -2116,7 +2114,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next-auth/4.19.2_klmjkk7frv5rhqq6c6vl6v2ahm:
+  /next-auth/4.19.2_qgtcjgzkkjtbiyvnx7d32fl5vu:
     resolution: {integrity: sha512-6V2YG3IJQVhgCAH7mvT3yopTW92gMdUrcwGX7NQ0dCreT/+axGua/JmVdarjec0C/oJukKpIYRgjMlV+L5ZQOQ==}
     peerDependencies:
       next: ^12.2.5 || ^13
@@ -2132,7 +2130,6 @@ packages:
       cookie: 0.5.0
       jose: 4.13.0
       next: 13.2.1_biqbaboplfbrettd7655fr4n2y
-      nodemailer: 6.9.1
       oauth: 0.9.15
       openid-client: 5.4.0
       preact: 10.13.0
@@ -2192,11 +2189,6 @@ packages:
   /node-releases/2.0.10:
     resolution: {integrity: sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==}
     dev: true
-
-  /nodemailer/6.9.1:
-    resolution: {integrity: sha512-qHw7dOiU5UKNnQpXktdgQ1d3OFgRAekuvbJLcdG5dnEo/GtcTHRYM7+UfJARdOFU9WUQO8OiIamgWPmiSFHYAA==}
-    engines: {node: '>=6.0.0'}
-    dev: false
 
   /normalize-path/3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
