@@ -31,34 +31,34 @@ export const EmailVerify = () => {
     }
   }
 
-  const bgColor = 'bg-[#fafafa]';
-
   return (
-    <div className='flex flex-col items-center justify-center h-[1110px]'>
-      <p className='text-3xl font-bold tracking-normal mb-7'>Log in to Continue</p>
-      <form className='flex flex-col space-y-2' onSubmit={login}>
-        <Input name='email' placeholder='Email Address' scale={1.5} width='300px' value={formData.email} onChange={changeHandler} />
-        <Button
-          icon={<Mail />}
-          scale={1.5}
-          width='300px'
-          style={{ fontWeight: '500' }}
-          htmlType='submit'
-          loading={isLoading}
-          onClick={login}>
-          Magic Verification
-        </Button>
-        <Button
-          icon={<Lock />}
-          type='secondary-light'
-          scale={1.5}
-          width='300px'
-          style={{ fontWeight: '500', marginBottom: '24px' }}
-          onClick={() => redirectToLoginPage(formData.email)}
-          loading={isLoading}>
-          Password Verification
-        </Button>
-      </form>
+    <div className='flex flex-col items-center justify-center min-h-[1110px]'>
+      <div>
+        <p className='text-3xl font-bold tracking-normal mb-7'>Log in to Continue</p>
+        <form className='flex flex-col space-y-2' onSubmit={login}>
+          <Input name='email' placeholder='Email Address' scale={1.5} width='300px' value={formData.email} onChange={changeHandler} />
+          <Button
+            icon={<Mail />}
+            scale={1.5}
+            width='300px'
+            style={{ fontWeight: '500' }}
+            htmlType='submit'
+            loading={isLoading}
+            onClick={login}>
+            Magic Verification
+          </Button>
+          <Button
+            icon={<Lock />}
+            type='secondary-light'
+            scale={1.5}
+            width='300px'
+            style={{ fontWeight: '500', marginBottom: '24px' }}
+            onClick={() => redirectToLoginPage(formData.email)}
+            loading={isLoading}>
+            Password Verification
+          </Button>
+        </form>
+      </div>
     </div>
   );
 };
