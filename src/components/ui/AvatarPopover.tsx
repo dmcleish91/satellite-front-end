@@ -3,7 +3,7 @@ import { Popover, Transition } from '@headlessui/react';
 import { signOut } from 'next-auth/react';
 import { GeistLink } from './GeistLink';
 
-export default function InboxPopover() {
+export default function AvatarPopover() {
   return (
     <Popover className='popover-position'>
       <Popover.Button className='reset'>

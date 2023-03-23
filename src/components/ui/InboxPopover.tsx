@@ -6,7 +6,7 @@ export default function InboxPopover() {
   return (
     <Popover className='popover-position'>
       <Popover.Button className='reset'>
-        <div className='popover-button'>
+        <div className='popover-button flex items-center justify-center'>
           <Bell size={16} />
         </div>
       </Popover.Button>

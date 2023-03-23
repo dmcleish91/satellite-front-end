@@ -26,7 +26,7 @@ export const PasswordVerify = () => {
   }
 
   return (
-    <div className='flex flex-col items-center justify-center h-[1110px] bg-[#fafafa]'>
+    <div className='flex flex-col items-center justify-center h-[85vh]'>
       <p className='text-3xl font-bold tracking-normal mb-7'>Log in to Continue</p>
       <form className='flex flex-col space-y-2' onSubmit={login}>
         <Input name='email' placeholder='Email Address' scale={1.5} width='300px' value={formData.email} onChange={changeHandler} />

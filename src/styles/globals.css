@@ -13,23 +13,6 @@ html {
   background-color: #fafafa !important;
 }
 
-.auth-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  border-bottom: 1px solid #d1d5db;
-  background-color: #fafafa;
-  height: 48px;
-}
-
-.auth-menu {
-  display: flex;
-  padding-right: 28px;
-  gap: 0.5rem;
-}
-
 .main-header {
   display: flex;
   flex-direction: row;
@@ -38,6 +21,10 @@ html {
   width: 100%;
   border-bottom: 1px solid #d1d5db;
   background-color: #fafafa;
+}
+
+.main-navigation {
+  border-bottom: 1px solid #d1d5db;
 }
 
 .navigation-container {
@@ -71,9 +58,6 @@ html {
 }
 
 .popover-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 9999px;
   border: 1px solid #d1d5db;
   height: 28px;
